@@ -38,14 +38,7 @@ a:hover { text-decoration: none; }
 
 /* Start Main Menu */
 header {
-  /*background-image: url("../img/bg-1.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   padding: 235px 0;
-  /*margin-bottom: 60px;*/
-  /*background-attachment: fixed;*/
-  /*background-size: 100% 100%;*/
 }
 ul#menu {
 background: #40475A none repeat scroll 0 0;
@@ -65,7 +58,7 @@ z-index: 999;
 }
 .main-menu ul li a {
   background: #383E4C none repeat scroll 0 0;
-  border: 1px solid #646d7c;
+  border-bottom: 5px solid #646d7c;
   color: #fff;
   font-size: 20px;
   padding: 5px 20px;
@@ -75,7 +68,7 @@ z-index: 999;
 /*.main-menu ul li.active a,*/
 .main-menu ul li a:focus,
 .main-menu ul li a:hover {
-  background: #49505F;
+  border-bottom: 3px solid #646d7c;
 }
 .header-content  h1 {
   color: #fff;
@@ -181,13 +174,6 @@ div#service-area-main {
 .our-service{
   margin:65px 0px 85px;
 }
-/*section#services-area {
-  background-image: url("../img/bg-2.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}*/
 .service  h1 {
   color: #fff;
   text-transform: capitalize;
@@ -252,7 +238,7 @@ h2 {
   text-shadow: 2px 2px #333;
 }
 .contact-content p {
-    background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
     border-radius: 5px;
     color: #000;
     font-size: 16px;
@@ -376,16 +362,15 @@ input {
 /*************navigation******************/
 
  .navbar-inverse {
-    background-color: #383E4C;
-    border-color: #383E4C;
+    background-color: #000;
+    border-color: #000;
 }
 .navbar-nav>li {
     display: inline-block;
     padding: 10px;
 }
 .navbar-inverse .navbar-nav>li>a {
-    background: #383E4C none repeat scroll 0 0;
-    border: 1px solid #646d7c;
+    background: #000 none repeat scroll 0 0;
     color: #fff ;
     font-size: 20px;
     padding: 15px 25px;
@@ -397,7 +382,7 @@ input {
 
 .navbar-inverse .navbar-nav > li > a.current,
 .navbar-inverse .navbar-nav > li > a:hover {
-        background: #49505F;
+  border-bottom: 3px solid #646d7c;
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -525,12 +510,12 @@ input {
   }
   .navbar-inverse .navbar-nav>li>a:focus, 
   .navbar-inverse .navbar-nav>li>a:hover {
-    background-color: #383E4C;
+    border-bottom: 3px solid #646d7c;
   }
   .navbar-inverse .navbar-nav>.active>a, 
   .navbar-inverse .navbar-nav>.active>a:focus, 
   .navbar-inverse .navbar-nav>.active>a:hover {
-    background: #383E4C;
+    border-bottom: 3px solid #646d7c;
   }
   .navbar-inverse .navbar-nav > li > a { font-size: 16px; }
   .container {
@@ -538,7 +523,7 @@ input {
     margin-right: 0;
   }
   .single-page-nav {
-    background-color: #383E4C;
+    background-color: rgb(253, 253, 255);
     max-height: 0;
     -webkit-transition: max-height 0.8s;
             transition: max-height 0.8s;
