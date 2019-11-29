@@ -25,7 +25,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#section1">Homepage</a></li>
 					<li><a href="#section2">Trending Books</a></li>
-					<li><a href="#section3">Book List</a></li>
+					<li><a href="#section3">List Buku</a></li>
 					<li><a href="#section4">Login/Register</a></li>
 				</ul>
 			</div>
@@ -81,10 +81,10 @@
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 						<div class="testimonial-content">
-							<img src="img/4-4.jpg" alt="Image">
-							<h2>Book Four</h2>
+							<img src="img/stackBook.png" style="width:200" alt="Image">
+							<h2>All Books</h2>
 							<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-							<a href="#" class="content-link">details</a>
+							<a href="viewListBuku.php" class="content-link">details</a>
 							<br>
 							<p id="dets"></p>
 						</div>
@@ -94,7 +94,10 @@
 		</section>
 		<!-- End Testimornial Area -->
 	</div>
-	<!-- <div id="section3">
+	<div id="section3">
+		<br>
+		<br>
+		<br>
 		<section id="services-area" class="services-section">
 			<div class="container">
 				<div class="row">
@@ -109,7 +112,39 @@
 				</div>
 			</div>
 		</section>
-	</div> -->
+	</div>
+	<footer id="footer-area">
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+
+			<!-- Full-width slides/quotes -->
+			<div class="mySlides">
+				<q>A reader lives a thousand lives before he dies . . . The man who never reads lives only one.</q>
+				<p class="author">- George R.R. Martin</p>
+			</div>
+
+			<div class="mySlides">
+				<q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+				<p class="author">- Ernest Hemingway</p>
+			</div>
+
+			<div class="mySlides">
+				<q>I have not failed. I've just found 10,000 ways that won't work.</q>
+				<p class="author">- Thomas A. Edison</p>
+			</div>
+
+			<!-- Next/prev buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+
+		<!-- Dots/bullets/indicators -->
+		<div class="dot-container">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</footer>
 	<div id="section4">
 		<!-- Start Contact Area -->
 		<section id="contact-area" class="contact-section">
@@ -191,7 +226,7 @@
 				speed: 0.2
 			});
 			$('.services-section').parallax({
-				imageSrc: 'img/bg-2.jpg',
+				imageSrc: 'img/headerAllBooks.jpg',
 				speed: 0.2
 			});
 			$('.contact-section').parallax({
@@ -244,6 +279,36 @@
 			});
 
 		});
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
 	</script>
 </body>
 
