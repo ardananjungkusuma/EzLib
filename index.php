@@ -139,7 +139,7 @@
 		</div>
 	</footer>
 	<div id="section4">
-		<!-- Start Contact Area -->
+		<!-- Start Login Area #Fix Border Bottom Section Login Or Register-->
 		<section id="contact-area" class="contact-section">
 			<div class="container">
 				<div class="row">
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Contact Area -->
+		<!-- End Login Area -->
 	</div>
 
 	<!-- Start Footer Area -->
