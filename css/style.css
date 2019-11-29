@@ -38,14 +38,7 @@ a:hover { text-decoration: none; }
 
 /* Start Main Menu */
 header {
-  /*background-image: url("../img/bg-1.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   padding: 235px 0;
-  /*margin-bottom: 60px;*/
-  /*background-attachment: fixed;*/
-  /*background-size: 100% 100%;*/
 }
 ul#menu {
 background: #40475A none repeat scroll 0 0;
@@ -65,7 +58,7 @@ z-index: 999;
 }
 .main-menu ul li a {
   background: #383E4C none repeat scroll 0 0;
-  border: 1px solid #646d7c;
+  border-bottom: 5px solid #fff;
   color: #fff;
   font-size: 20px;
   padding: 5px 20px;
@@ -75,7 +68,7 @@ z-index: 999;
 /*.main-menu ul li.active a,*/
 .main-menu ul li a:focus,
 .main-menu ul li a:hover {
-  background: #49505F;
+  border-bottom: 3px solid #fff;
 }
 .header-content  h1 {
   color: #fff;
@@ -83,10 +76,10 @@ z-index: 999;
   text-transform: uppercase;
   text-shadow: 2px 2px #000;
 }
-.header-content h4 {
+.header-content h5 {
   color: #fff;
-  font-size: 25px;
-  text-shadow: 1px 1px #333;
+  font-size: 20px;
+  text-shadow: 2px 1px #333;
 }
 .single-page-nav { text-align: center; }
 /* End Header CSS */
@@ -181,13 +174,6 @@ div#service-area-main {
 .our-service{
   margin:65px 0px 85px;
 }
-/*section#services-area {
-  background-image: url("../img/bg-2.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}*/
 .service  h1 {
   color: #fff;
   text-transform: capitalize;
@@ -236,15 +222,6 @@ h2 {
     background: #E6E6E6 none repeat scroll 0 0;
 }
 
-/* End Testimornial CSS */
-
-/* Start Contact CSS */
-/*section#contact-area {
-  background-image: url("../img/bg-3.jpg");
-  background-position: center center;
-  background-size: cover;  
-  background-attachment: fixed; 
-}*/
 .contact-content h1 {
     color: #fff;
     text-transform: capitalize;
@@ -252,7 +229,7 @@ h2 {
   text-shadow: 2px 2px #333;
 }
 .contact-content p {
-    background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+    background: rgba(255, 255, , 0.4) none repeat scroll 0 0;
     border-radius: 5px;
     color: #000;
     font-size: 16px;
@@ -331,7 +308,6 @@ input {
 
 .services-section {
     height: 100%;
-   /* padding-top: 150px;*/
 }
 .tm-box {
   background-color: #F2F2F2;
@@ -376,16 +352,15 @@ input {
 /*************navigation******************/
 
  .navbar-inverse {
-    background-color: #383E4C;
-    border-color: #383E4C;
+    background-color: #000;
+    border-color: #000;
 }
 .navbar-nav>li {
     display: inline-block;
     padding: 10px;
 }
 .navbar-inverse .navbar-nav>li>a {
-    background: #383E4C none repeat scroll 0 0;
-    border: 1px solid #646d7c;
+    background: #000 none repeat scroll 0 0;
     color: #fff ;
     font-size: 20px;
     padding: 15px 25px;
@@ -397,7 +372,7 @@ input {
 
 .navbar-inverse .navbar-nav > li > a.current,
 .navbar-inverse .navbar-nav > li > a:hover {
-        background: #49505F;
+  border-bottom: 3px solid #fff;
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -525,12 +500,12 @@ input {
   }
   .navbar-inverse .navbar-nav>li>a:focus, 
   .navbar-inverse .navbar-nav>li>a:hover {
-    background-color: #383E4C;
+    border-bottom: 3px solid #fff;
   }
   .navbar-inverse .navbar-nav>.active>a, 
   .navbar-inverse .navbar-nav>.active>a:focus, 
   .navbar-inverse .navbar-nav>.active>a:hover {
-    background: #383E4C;
+    border-bottom: 3px solid #fff;
   }
   .navbar-inverse .navbar-nav > li > a { font-size: 16px; }
   .container {
@@ -538,7 +513,7 @@ input {
     margin-right: 0;
   }
   .single-page-nav {
-    background-color: #383E4C;
+    background-color: rgb(253, 253, 255);
     max-height: 0;
     -webkit-transition: max-height 0.8s;
             transition: max-height 0.8s;
@@ -574,3 +549,74 @@ input {
 @media only screen and (max-width: 480px) {
   header { height: 50vh; }
 }
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #fff;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
