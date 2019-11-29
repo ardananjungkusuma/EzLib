@@ -31,27 +31,30 @@
             </div>
         </div>
     </nav>
-    <div id="section2">
-        <!-- Start Catalogue Book Area -->
-        <section id="testimornial-area" style="padding:50px">
-            <div class="container">
-                <div class="row text-center" style="margin-top:30px;">
+    <!-- Start Testimornial Area -->
+    <section id="testimornial-area">
+        <div class="container">
+            <div class="row" style="margin-top:50px;">
+                <div class="col-lg-12">
                     <?php
                     include "connection.php";
 
-                    $query = "select * from buku";
+                    $id_buku = $_GET['id_buku'];
+                    $query = "select * from buku where id_buku='$id_buku'";
                     $result = mysqli_query($connect, $query);
 
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_array($result)) {
                             ?>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                                <div class="testimonial-content">
-                                    <img src="<?php echo $row['nama_file'] ?>" width="150" style="margin-top:20px;">
-                                    <h2><?php echo $row['nama_buku'] ?></h2>
-                                    <h4><?php echo $row['penerbit'] ?></h4>
-                                    <h3><?php echo $row['status_buku'] ?></h3>
-                                    <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>">Detail Buku</a>
+                            <div class="tm-box">
+                                <center><img src="<?php echo $row['nama_file'] ?>" width="140"></center>
+                                <div class="tm-box-description">
+                                    <center>
+                                        <h2><?php echo $row['nama_buku'] ?></h2>
+                                        <h6><?php echo $row['penerbit'] ?></h6>
+                                        <h5 style="color:red;"><?php echo $row['status_buku'] ?></h5>
+                                    </center>
+                                    <p class="tm-box-p"><?php echo $row['keterangan_buku'] ?></p>
                                 </div>
                             </div>
                     <?php
@@ -62,8 +65,9 @@
                     ?>
                 </div>
             </div>
-        </section>
-        <!-- End Catalogue Book Area -->
+        </div>
+    </section>
+    <!-- End Testimornial Area -->
     </div>
 </body>
 

@@ -39,7 +39,7 @@
 					<div class="col-sm-12 text-center">
 						<div class="header-content">
 							<h1>Ez Library</h1>
-							<h4>Your choice for online library</h4>
+							<h4>Your Choice For Online Library</h4>
 						</div>
 					</div>
 				</div>
@@ -48,11 +48,9 @@
 	</div>
 	<div id="section2">
 		<!-- Start Testimornial Area -->
-		<section id="testimornial-area">
+		<section id="testimornial-area" style="padding:50px">
 			<div class="container">
-				<div class="row text-center">
-					<br>
-					<br>
+				<div class="row text-center" style="margin-top:30px;">
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 						<div class="testimonial-content">
 							<img src="img/4-1.jpg" alt="Image">
@@ -94,19 +92,14 @@
 		</section>
 		<!-- End Testimornial Area -->
 	</div>
-	<div id="section3">
-		<br>
-		<br>
-		<br>
+	<div id="section3" style="padding-top:110px;">
 		<section id="services-area" class="services-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center inner our-service">
 						<div class="service">
-							<h1>Our Services</h1>
-							<p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
-								felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
-								Etiam a mi quis arcu varius condimentum.</p>
+							<h1>All Book List</h1><br>
+							<a href="viewListBuku.php" class="content-link">View All Book Catalogue</a>
 						</div>
 					</div>
 				</div>
@@ -124,13 +117,13 @@
 			</div>
 
 			<div class="mySlides">
-				<q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-				<p class="author">- Ernest Hemingway</p>
+				<q>Reading is essential for those who seek to rise above the ordinary.</q>
+				<p class="author">- Jim Rohn</p>
 			</div>
 
 			<div class="mySlides">
-				<q>I have not failed. I've just found 10,000 ways that won't work.</q>
-				<p class="author">- Thomas A. Edison</p>
+				<q>So please, oh please, we beg, we pray, go throw your TV set away, and in its place you can install a lovely bookshelf on the wall.</q>
+				<p class="author">- Roald Dahl</p>
 			</div>
 
 			<!-- Next/prev buttons -->

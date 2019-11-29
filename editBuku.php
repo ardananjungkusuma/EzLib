@@ -23,8 +23,12 @@
                     <td><input type="text" name="nama_buku" value="<?php echo $row['nama_buku']; ?>" size="30" maxlength="99" required></td>
                 </tr>
                 <tr>
+                    <td>Penerbit : </td>
+                    <td><input type="text" name="penerbit" value="<?php echo $row['penerbit']; ?>" size="30" maxlength="50" required></td>
+                </tr>
+                <tr>
                     <td>Keterangan Buku: </td>
-                    <td><textarea name="keterangan_buku" cols="30" rows="10"><?php echo $row['keterangan_buku']; ?> required</textarea></td>
+                    <td><textarea name="keterangan_buku" required cols="30" rows="10"><?php echo $row['keterangan_buku']; ?></textarea></td>
                 </tr>
                 <tr>
                     <td>Status Buku: </td>
