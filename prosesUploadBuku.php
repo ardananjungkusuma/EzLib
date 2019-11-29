@@ -16,6 +16,9 @@ if (!empty($_FILES["nama_file"]["tmp_name"])) {
             echo "<p>Keterangan Buku : $keterangan_buku</p>";
             echo "<p>Status Buku : $status_buku</p>";
             echo "<p><img src=\"$gambar\" width=\"200\"/></p>";
+            ?>
+            <a href="viewListBukuAdmin.php">Lihat data buku</a>
+<?php
         } else {
             echo "<p>Gambar gagal dikirim</p>";
         }

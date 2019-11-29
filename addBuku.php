@@ -9,7 +9,7 @@
 <body>
     <form action="prosesUploadBuku.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
         <p>Nama Buku :
-            <input name="nama_buku" type="text" id="nama_Buku" size="30" maxlength="45" required />
+            <input name="nama_buku" type="text" id="nama_Buku" size="30" maxlength="95" required />
         </p>
         <p>
             Keterangan Buku:

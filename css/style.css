@@ -58,7 +58,7 @@ z-index: 999;
 }
 .main-menu ul li a {
   background: #383E4C none repeat scroll 0 0;
-  border-bottom: 5px solid #646d7c;
+  border-bottom: 5px solid #fff;
   color: #fff;
   font-size: 20px;
   padding: 5px 20px;
@@ -68,7 +68,7 @@ z-index: 999;
 /*.main-menu ul li.active a,*/
 .main-menu ul li a:focus,
 .main-menu ul li a:hover {
-  border-bottom: 3px solid #646d7c;
+  border-bottom: 3px solid #fff;
 }
 .header-content  h1 {
   color: #fff;
@@ -222,15 +222,6 @@ h2 {
     background: #E6E6E6 none repeat scroll 0 0;
 }
 
-/* End Testimornial CSS */
-
-/* Start Contact CSS */
-/*section#contact-area {
-  background-image: url("../img/bg-3.jpg");
-  background-position: center center;
-  background-size: cover;  
-  background-attachment: fixed; 
-}*/
 .contact-content h1 {
     color: #fff;
     text-transform: capitalize;
@@ -238,7 +229,7 @@ h2 {
   text-shadow: 2px 2px #333;
 }
 .contact-content p {
-    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+    background: rgba(255, 255, , 0.4) none repeat scroll 0 0;
     border-radius: 5px;
     color: #000;
     font-size: 16px;
@@ -342,6 +333,7 @@ input {
   color: #000;
 }
 .contact-section .container {
+  
   max-width: 750px;
 }
 
@@ -382,7 +374,7 @@ input {
 
 .navbar-inverse .navbar-nav > li > a.current,
 .navbar-inverse .navbar-nav > li > a:hover {
-  border-bottom: 3px solid #646d7c;
+  border-bottom: 3px solid #fff;
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -510,12 +502,12 @@ input {
   }
   .navbar-inverse .navbar-nav>li>a:focus, 
   .navbar-inverse .navbar-nav>li>a:hover {
-    border-bottom: 3px solid #646d7c;
+    border-bottom: 3px solid #fff;
   }
   .navbar-inverse .navbar-nav>.active>a, 
   .navbar-inverse .navbar-nav>.active>a:focus, 
   .navbar-inverse .navbar-nav>.active>a:hover {
-    border-bottom: 3px solid #646d7c;
+    border-bottom: 3px solid #fff;
   }
   .navbar-inverse .navbar-nav > li > a { font-size: 16px; }
   .container {
