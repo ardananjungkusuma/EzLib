@@ -63,12 +63,11 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                   <div class="testimonial-content">
                     <img src="<?php echo $row['nama_file'] ?>" width="150" style="margin-top:20px;">
-                    <h2><?php echo $row['nama_buku'] ?></h2>
-                    <h4><?php echo $row['penerbit'] ?></h4>
-                    <h3><?php echo $row['status_buku'] ?></h3>
-                    <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>">Detail Buku</a>
-                    <br>
-                    <a href="editBuku.php?id_buku=<?php echo $row['id_buku']; ?>">Edit Buku</a>
+                    <h2 style="padding:10px;"><?php echo $row['nama_buku'] ?></h2>
+                    <h5>"<?php echo $row['penerbit'] ?>"</h5>
+                    <mark style="background-color:black;color:white;"><?php echo $row['status_buku'] ?></mark><br><br>
+                    <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
+                    <a href="editBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-primary">Edit Buku</button></a>
                   </div>
                 </div>
             <?php
