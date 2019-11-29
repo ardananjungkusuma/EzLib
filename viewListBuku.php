@@ -23,10 +23,10 @@
             </div>
             <div class="single-page-nav sticky-wrapper" id="tmNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#section1">Homepage</a></li>
-                    <li><a href="#section2">Trending Books</a></li>
-                    <li><a href="#section3">List Buku</a></li>
-                    <li><a href="#section4">Login/Register</a></li>
+                    <li><a href="index.php#section1">Homepage</a></li>
+                    <li><a href="index.php#section2">Trending Books</a></li>
+                    <li><a href="index.php#section3">List Buku</a></li>
+                    <li><a href="index.php#section4">Login/Register</a></li>
                 </ul>
             </div>
         </div>

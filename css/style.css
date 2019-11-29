@@ -76,10 +76,10 @@ z-index: 999;
   text-transform: uppercase;
   text-shadow: 2px 2px #000;
 }
-.header-content h4 {
+.header-content h5 {
   color: #fff;
-  font-size: 25px;
-  text-shadow: 1px 1px #333;
+  font-size: 20px;
+  text-shadow: 2px 1px #333;
 }
 .single-page-nav { text-align: center; }
 /* End Header CSS */
