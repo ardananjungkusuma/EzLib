@@ -16,7 +16,6 @@
     $result = mysqli_query($connect, $query);
     $check = mysqli_num_rows($result);
 
-
     if ($check > 0) {
         session_start();
         $_SESSION['username'] = $username;
@@ -36,7 +35,7 @@
         ?>
         <script>
             Swal.fire({
-                icon: 'error',
+                icon: 'info',
                 title: 'Username atau Password Salah',
                 showConfirmButton: false,
                 timer: 2000

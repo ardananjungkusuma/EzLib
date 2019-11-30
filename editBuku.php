@@ -93,8 +93,7 @@
                 ?>
               </div>
               <br>
-              <button type="submit" class="btn btn-success" value="Simpan">Simpan</button>
-              <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
+              <button type="submit" class="btn btn-success" value="Simpan" style="margin-left:80px;">Simpan</button>
           </form>
         </div>
       </div>

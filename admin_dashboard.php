@@ -19,7 +19,6 @@
   include "connection.php";
 
   session_start();
-
   if ($_SESSION['status'] == 'admin_login') {
     ?>
     <nav class="navbar navbar-inverse">

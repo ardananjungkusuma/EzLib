@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Logout Admin</title>
+    <title>Logout User</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -23,7 +23,7 @@
         })
     </script>
     <?php
-    header("Refresh:1; url=admin_login.php");
+    header("Refresh:1; url=user_login.php");
     ?>
 </body>
 

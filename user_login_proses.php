@@ -4,6 +4,7 @@
     <title>Login Status</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
+
 <body>
     <?php
     include "connection.php";
@@ -15,8 +16,11 @@
     $result = mysqli_query($connect, $query);
     $check = mysqli_num_rows($result);
 
-
-    if ($check) { ?>
+    if ($check > 0) {
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = 'user_login';
+        ?>
         <script>
             Swal.fire({
                 icon: 'success',
