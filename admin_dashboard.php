@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style1.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
 </head>
 
 <body>

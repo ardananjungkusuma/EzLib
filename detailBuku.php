@@ -9,6 +9,16 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .zoom {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+        }
+    </style>
 </head>
 
 <body>
@@ -31,8 +41,8 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
-        <div class="row" style="margin-top:90px;background-color:whitesmoke;">
+    <div class="container" style="padding: 20px; margin: 20 px auto; margin-left: auto; margin-right: auto;">
+        <div class="row" style="margin-top:190px;">
             <div class="col-md-6">
                 <?php
                 include "connection.php";
@@ -44,7 +54,7 @@
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_array($result)) {
                         ?>
-                        <center><img style="margin-top:30px;border: 1px solid black;" src="<?php echo $row['nama_file'] ?>" width="140"></center>
+                        <center><img class="zoom" style="margin-top:30px;margin-bottom:30px;border: 1px solid black;" src="<?php echo $row['nama_file'] ?>" width="140"></center>
                 <?php
                     }
                 } else {
@@ -66,7 +76,7 @@
                             <h2><?php echo $row['nama_buku'] ?></h2>
                             <h6><?php echo $row['penerbit'] ?></h6>
                             <h5 style="color:red;"><?php echo $row['status_buku'] ?></h5>
-                            <?php echo $row['keterangan_buku'] ?>
+                            <h5 style="margin-bottom:10px;"><?php echo $row['keterangan_buku'] ?></h5>
                         </center>
                 <?php
                     }
