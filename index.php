@@ -165,7 +165,7 @@
 				<div class="col-sm-12">
 					<div class="footer-content">
 						<h1>Ez Library</h1>
-						<p>“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.” – George R.R. Martin</p>
+						<p>“We provides best service for you - Administrator EzLib“</p>
 					</div>
 				</div>
 			</div>

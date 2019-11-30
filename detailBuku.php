@@ -31,43 +31,50 @@
             </div>
         </div>
     </nav>
-    <!-- Start Testimornial Area -->
-    <section id="testimornial-area">
-        <div class="container">
-            <div class="row" style="margin-top:50px;">
-                <div class="col-lg-12">
-                    <?php
-                    include "connection.php";
+    <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
+        <div class="row" style="margin-top:90px;background-color:whitesmoke;">
+            <div class="col-md-6">
+                <?php
+                include "connection.php";
 
-                    $id_buku = $_GET['id_buku'];
-                    $query = "select * from buku where id_buku='$id_buku'";
-                    $result = mysqli_query($connect, $query);
+                $id_buku = $_GET['id_buku'];
+                $query = "select * from buku where id_buku='$id_buku'";
+                $result = mysqli_query($connect, $query);
 
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_array($result)) {
-                            ?>
-                            <div class="tm-box">
-                                <center><img src="<?php echo $row['nama_file'] ?>" width="140"></center>
-                                <div class="tm-box-description">
-                                    <center>
-                                        <h2><?php echo $row['nama_buku'] ?></h2>
-                                        <h6><?php echo $row['penerbit'] ?></h6>
-                                        <h5 style="color:red;"><?php echo $row['status_buku'] ?></h5>
-                                    </center>
-                                    <p class="tm-box-p"><?php echo $row['keterangan_buku'] ?></p>
-                                </div>
-                            </div>
-                    <?php
-                        }
-                    } else {
-                        echo "0 Result";
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <center><img style="margin-top:30px;border: 1px solid black;" src="<?php echo $row['nama_file'] ?>" width="140"></center>
+                <?php
                     }
-                    ?>
-                </div>
+                } else {
+                    echo "0 Result";
+                } ?>
+            </div>
+            <div class="col-md-6">
+                <?php
+                include "connection.php";
+
+                $id_buku = $_GET['id_buku'];
+                $query = "select * from buku where id_buku='$id_buku'";
+                $result = mysqli_query($connect, $query);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <center>
+                            <h2><?php echo $row['nama_buku'] ?></h2>
+                            <h6><?php echo $row['penerbit'] ?></h6>
+                            <h5 style="color:red;"><?php echo $row['status_buku'] ?></h5>
+                            <?php echo $row['keterangan_buku'] ?>
+                        </center>
+                <?php
+                    }
+                } else {
+                    echo "0 Result";
+                } ?>
             </div>
         </div>
-    </section>
-    <!-- End Testimornial Area -->
     </div>
 </body>
 

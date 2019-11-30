@@ -38,167 +38,168 @@
                                 <li><a href="#section1">Homepage</a></li>
                                 <li><a href="#section2">Trending Books</a></li>
                                 <li><a href="#section3">List Buku</a></li>
-                                <li><a href="userProfile.php?id_user=<?php echo $row['id_user']; ?>">Welcome <?php echo $usernameLoginNow ?></a></li>
+                                <li><a href="#section4">User Profile</a></li>
                             </ul>
+
                         </div>
+
                     </div>
                 </nav>
+                <div id="section1">
+                    <header id="header-area" class="intro-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <div class="header-content">
+                                        <h1>Ez Library</h1>
+                                        <h5>Your Choice For Online Library</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div id="section2">
+                    <!-- Start Testimornial Area -->
+                    <section id="testimornial-area" style="padding:50px">
+                        <div class="container">
+                            <div class="row text-center" style="margin-top:30px;">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-1.jpg" alt="Image">
+                                        <h2>Book One</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-2.jpg" alt="Image">
+                                        <h2>Book Two</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
+                                        <a href="#" class="content-link">read it</a>
+                                        <br>
+                                        <p id="redd"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-3.jpg" alt="Image">
+                                        <h2>Book Three</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/stackBook.png" style="width:200" alt="Image">
+                                        <h2>All Books</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
+                                        <a href="viewListBuku.php" class="content-link">details</a>
+                                        <br>
+                                        <p id="dets"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Testimornial Area -->
+                </div>
+                <div id="section3" style="padding-top:110px;">
+                    <section id="services-area" class="services-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 text-center inner our-service">
+                                    <div class="service">
+                                        <h1>All Book List</h1><br>
+                                        <a href="viewListBuku.php" class="content-link">View All Book Catalogue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <footer id="footer-area">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width slides/quotes -->
+                        <div class="mySlides">
+                            <q>A reader lives a thousand lives before he dies . . . The man who never reads lives only one.</q>
+                            <p class="author">- George R.R. Martin</p>
+                        </div>
+
+                        <div class="mySlides">
+                            <q>Reading is essential for those who seek to rise above the ordinary.</q>
+                            <p class="author">- Jim Rohn</p>
+                        </div>
+
+                        <div class="mySlides">
+                            <q>So please, oh please, we beg, we pray, go throw your TV set away, and in its place you can install a lovely bookshelf on the wall.</q>
+                            <p class="author">- Roald Dahl</p>
+                        </div>
+
+                        <!-- Next/prev buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- Dots/bullets/indicators -->
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </footer>
+                <div id="section4">
+                    <!-- Start Login Area #Fix Border Bottom Section Login Or Register-->
+                    <section id="contact-area" class="contact-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 text-center inner">
+                                    <div class="contact-content">
+                                        <h1>Profile Status</h1>
+                                        <div class="form-group">
+                                            <a href="userProfile.php?id_user=<?php echo $row['id_user']; ?>"><button class="btn btn-default">Profile Details</button></a>
+                                            <a href="sessionLogoutUser.php"><button class="btn btn-danger">Log Out</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Login Area -->
+                </div>
+
+                <!-- Start Footer Area -->
+                <footer id="footer-area">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <div class="footer-content">
+                                    <h1>Ez Library</h1>
+                                    <p>“We provides best service for you - Administrator EzLib“</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <p class="copy">Copyright © 2019
+                                    | Design: Ardan Anjung Kusuma, Sugeng Prastiyo</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer Area -->
         <?php
                 }
             } else {
                 echo "Bad Wkwkw";
             }
             ?>
-        <div id="section1">
-            <header id="header-area" class="intro-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <div class="header-content">
-                                <h1>Ez Library</h1>
-                                <h5>Your Choice For Online Library</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div id="section2">
-            <!-- Start Testimornial Area -->
-            <section id="testimornial-area" style="padding:50px">
-                <div class="container">
-                    <div class="row text-center" style="margin-top:30px;">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <div class="testimonial-content">
-                                <img src="img/4-1.jpg" alt="Image">
-                                <h2>Book One</h2>
-                                <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-                                <br>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <div class="testimonial-content">
-                                <img src="img/4-2.jpg" alt="Image">
-                                <h2>Book Two</h2>
-                                <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                                <a href="#" class="content-link">read it</a>
-                                <br>
-                                <p id="redd"></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <div class="testimonial-content">
-                                <img src="img/4-3.jpg" alt="Image">
-                                <h2>Book Three</h2>
-                                <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-                                <br>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <div class="testimonial-content">
-                                <img src="img/stackBook.png" style="width:200" alt="Image">
-                                <h2>All Books</h2>
-                                <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                                <a href="viewListBuku.php" class="content-link">details</a>
-                                <br>
-                                <p id="dets"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Testimornial Area -->
-        </div>
-        <div id="section3" style="padding-top:110px;">
-            <section id="services-area" class="services-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center inner our-service">
-                            <div class="service">
-                                <h1>All Book List</h1><br>
-                                <a href="viewListBuku.php" class="content-link">View All Book Catalogue</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <footer id="footer-area">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width slides/quotes -->
-                <div class="mySlides">
-                    <q>A reader lives a thousand lives before he dies . . . The man who never reads lives only one.</q>
-                    <p class="author">- George R.R. Martin</p>
-                </div>
-
-                <div class="mySlides">
-                    <q>Reading is essential for those who seek to rise above the ordinary.</q>
-                    <p class="author">- Jim Rohn</p>
-                </div>
-
-                <div class="mySlides">
-                    <q>So please, oh please, we beg, we pray, go throw your TV set away, and in its place you can install a lovely bookshelf on the wall.</q>
-                    <p class="author">- Roald Dahl</p>
-                </div>
-
-                <!-- Next/prev buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-
-            <!-- Dots/bullets/indicators -->
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </footer>
-        <div id="section4">
-            <!-- Start Login Area #Fix Border Bottom Section Login Or Register-->
-            <section id="contact-area" class="contact-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center inner">
-                            <div class="contact-content">
-                                <h1>Ez Lib Authentication</h1>
-                                <div class="form-group">
-                                    <a href="user_login.php"><button class="btn btn-default">Login</button></a>
-                                    <a href="user_register.php"><button class="btn btn-default">Register</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Login Area -->
-        </div>
-
-        <!-- Start Footer Area -->
-        <footer id="footer-area">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-sm-12">
-                        <div class="footer-content">
-                            <h1>Ez Library</h1>
-                            <p>“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.” – George R.R. Martin</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <p class="copy">Copyright © 2019
-                            | Design: Ardan Anjung Kusuma, Sugeng Prastiyo</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- End Footer Area -->
-
         <script src="js/jquery-1.11.2.min.js"></script>
         <script src="js/jquery.scrollUp.min.js"></script> <!-- https://github.com/markgoodyear/scrollup -->
         <script src="js/jquery.singlePageNav.min.js"></script> <!-- https://github.com/ChrisWojcik/single-page-nav -->
@@ -217,7 +218,7 @@
                     speed: 0.2
                 });
                 $('.contact-section').parallax({
-                    imageSrc: 'img/headerLogin.jpg',
+                    imageSrc: 'img/headerProfileStatus.jpg',
                     speed: 0.2
                 });
 
