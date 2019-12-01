@@ -8,6 +8,7 @@
     <table border="1px">
         <tr>
             <th>Nama Buku</th>
+            <th>Penerbit</th>
             <th>Keterangan Buku</th>
             <th>Status Buku</th>
             <th>Gambar Buku</th>
@@ -24,6 +25,7 @@
                 ?>
                 <tr>
                     <td><?php echo $row['nama_buku'] ?></td>
+                    <td><?php echo $row['penerbit'] ?></td>
                     <td><?php echo $row['keterangan_buku'] ?></td>
                     <td><?php echo $row['status_buku'] ?></td>
                     <td><img src="<?php echo $row['nama_file'] ?>" width="140"></td>
