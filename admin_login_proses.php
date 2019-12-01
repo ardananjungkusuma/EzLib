@@ -12,14 +12,14 @@
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    $query = "select * from user where username='$username' and password='$password'";
+    $query = "select * from admin where username='$username' and password='$password'";
     $result = mysqli_query($connect, $query);
     $check = mysqli_num_rows($result);
 
     if ($check > 0) {
         session_start();
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = 'user_login';
+        $_SESSION['status'] = 'admin_login';
         ?>
         <script>
             Swal.fire({
@@ -30,9 +30,19 @@
             })
         </script>
     <?php
-        header("Refresh:2; url=user_dashboard.php");
+        header("Refresh:2; url=admin_dashboard.php");
     } else {
-        header("Refresh:0; url=user_login.php");
+        ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: 'Username atau Password Salah',
+                showConfirmButton: false,
+                timer: 2000
+            })
+        </script>
+    <?php
+        header("Refresh:1; url=admin_login.php");
     }
     ?>
 </body>

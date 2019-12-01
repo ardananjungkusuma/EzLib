@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>EzLib</title>
+    <title>User Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
@@ -17,28 +19,36 @@
 
     session_start();
     if ($_SESSION['status'] == 'user_login') {
-        header("Refresh:0; url=user_profile.php");
-    } else {
         ?>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
                 </div>
-                <div class="single-page-nav sticky-wrapper" id="tmNavbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.php#section1">Homepage</a></li>
-                        <li><a href="index.php#section2">Trending Books</a></li>
-                        <li><a href="index.php#section3">List Buku</a></li>
-                        <li><a href="index.php#section4">Login/Register</a></li>
-                    </ul>
+                <ul class="nav navbar-nav" style="margin-left:60px;">
+                    <li class="active"><a href="user_profile.php">List Buku</a></li>
+                    <li><a href="#">Pemesanan Anda</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
+                    <div class="dropdown-content">
+                        <a href="#">Edit Profile</a>
+                        <a href="sessionLogoutUser.php">Log Out</a>
+                    </div>
                 </div>
+                <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </nav>
+
         <div id="section2">
             <!-- Start Catalogue Book Area -->
             <section id="testimornial-area" style="padding:50px">
@@ -60,6 +70,7 @@
                                         <h5>"<?php echo $row['penerbit'] ?>"</h5>
                                         <mark style="background-color:black;color:white;"><?php echo $row['status_buku'] ?></mark><br><br>
                                         <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
+                                        <a href="pesanBuku.php?id_buku=<?php echo $row['id_buku']; ?>&username=<?php echo $_SESSION['username'] ?>"><button class="btn btn-primary">Pesan Buku</button></a>
                                     </div>
                                 </div>
                         <?php
@@ -74,6 +85,8 @@
             <!-- End Catalogue Book Area -->
         </div>
     <?php
+    } else {
+        header("Refresh:0; url=user_login.php");
     }
     ?>
 </body>
