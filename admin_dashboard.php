@@ -26,11 +26,18 @@
           <a class="navbar-brand" href="admin_dashboard.php">Admin Dashboard EzLib</a>
         </div>
         <ul class="nav navbar-nav" style="margin-left:60px;">
-          <li class="active"><a href="#">Buku</a></li>
-          <li><a href="#">User</a></li>
-          <li><a href="sessionLogoutAdmin.php">Log Out</a></li>
+          <li class="active"><a href="admin_dashboard.php">Manajemen Buku</a></li>
+          <li><a href="#">Manajemen Peminjaman</a></li>
+          <li><a href="#">Manajemen User</a></li>
         </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
+        <div class="dropdown">
+          <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome Admin <?php echo $_SESSION['username'] ?></button>
+          <div class="dropdown-content">
+            <a href="#">Edit Profile</a>
+            <a href="sessionLogoutAdmin.php">Log Out</a>
+          </div>
+        </div>
+        <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:200px;">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="search">
             <div class="input-group-btn">
@@ -81,17 +88,7 @@
     </div>
   <?php
   } else {
-    ?>
-    <script>
-      Swal.fire({
-        icon: 'error',
-        title: 'Anda Belum Login',
-        showConfirmButton: false,
-        timer: 2000
-      })
-    </script>
-  <?php
-    header("Refresh:1; url=admin_login.php");
+    header("Refresh:0; url=admin_login.php");
   }
   ?>
 </body>

@@ -32,17 +32,7 @@
     <?php
         header("Refresh:2; url=user_dashboard.php");
     } else {
-        ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Username atau Password Salah',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
-    <?php
-        header("Refresh:1; url=user_login.php");
+        header("Refresh:0; url=user_login.php");
     }
     ?>
 </body>

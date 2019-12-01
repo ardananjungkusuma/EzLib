@@ -33,17 +33,7 @@
             ?>
     <?php
     } else {
-        ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Error Edit Book',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
-    <?php
-        header("Refresh:1; url=admin_dashboard.php");
+        header("Refresh:0; url=admin_dashboard.php");
     }
     ?>
 </body>

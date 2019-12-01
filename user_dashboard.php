@@ -112,7 +112,7 @@
                                 <div class="col-sm-12 text-center inner our-service">
                                     <div class="service">
                                         <h1>All Book List</h1><br>
-                                        <a href="viewListBuku.php" class="content-link">View All Book Catalogue</a>
+                                        <a href="user_profile.php" class="content-link">View All Book Catalogue</a>
                                     </div>
                                 </div>
                             </div>
@@ -300,17 +300,7 @@
         </script>
     <?php
     } else {
-        ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Anda Belum Login',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
-    <?php
-        header("Refresh:1; url=user_login.php");
+        header("Refresh:0; url=user_login.php");
     }
     ?>
 </body>

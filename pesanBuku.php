@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Admin Dashboard</title>
+    <title>User Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -19,19 +18,24 @@
     include "connection.php";
 
     session_start();
-
-    if ($_SESSION['status'] == 'admin_login') {
+    if ($_SESSION['status'] == 'user_login') {
         ?>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="admin_dashboard.php">Admin Dashboard EzLib</a>
+                    <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
                 </div>
                 <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="#">Buku</a></li>
-                    <li><a href="#">User</a></li>
-                    <li><a href="sessionLogoutAdmin.php">Log Out</a></li>
+                    <li class="active"><a href="user_profile.php">List Buku</a></li>
+                    <li><a href="#">Pemesanan Anda</a></li>
                 </ul>
+                <div class="dropdown">
+                    <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
+                    <div class="dropdown-content">
+                        <a href="#">Edit Profile</a>
+                        <a href="sessionLogoutUser.php">Log Out</a>
+                    </div>
+                </div>
                 <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search" name="search">
@@ -44,9 +48,18 @@
                 </form>
             </div>
         </nav>
+        <?php
+            include "connection.php";
+            $id_buku = $_GET['id_buku'];
+            $username = $_GET['username'];
+            $queryUser = "select * from user where username = '$username'";
+            $query = "select * from buku where id_buku='$id_buku'";
+            $resultUsername = mysqli_query($connect, $queryUser);
+            $result = mysqli_query($connect, $query);
+            ?>
         <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
             <center>
-                <h1>Tambah Buku</h1><br>
+                <h1>Pesen Buku</h1><br>
             </center>
             <div class="row">
                 <div class="col-lg-12">
@@ -85,15 +98,14 @@
                             <br>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-success" value="Simpan">Simpan</button>
-                        <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
+                        <button type="submit" class="btn btn-success" value="Simpan">Pesan</button>
                     </form>
                 </div>
             </div>
         </div>
     <?php
     } else {
-        header("Refresh:0; url=admin_login.php");
+        header("Refresh:0; url=user_login.php");
     }
     ?>
 </body>

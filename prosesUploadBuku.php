@@ -58,21 +58,11 @@
                     timer: 2000
                 })
             </script>
-        <?php
-                header("Refresh:1; url=addBuku.php");
-            }
-        } else {
-            ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Anda Belum Login',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
     <?php
-        header("Refresh:1; url=admin_login.php");
+            header("Refresh:1; url=addBuku.php");
+        }
+    } else {
+        header("Refresh:0; url=admin_login.php");
     } ?>
 </body>
 

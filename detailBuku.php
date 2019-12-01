@@ -13,10 +13,11 @@
         .zoom {
             transition: transform .2s;
             margin: 0 auto;
+            transform: scale(1.5);
         }
 
         .zoom:hover {
-            transform: scale(1.5);
+            transform: scale(2.0);
         }
     </style>
 </head>

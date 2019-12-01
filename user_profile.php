@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style1.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
 </head>
 
 <body>
@@ -24,13 +23,19 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="user_profile.php">User Dashboard EzLib</a>
+                    <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
                 </div>
                 <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="#">Buku</a></li>
-                    <li><a href="#">User</a></li>
-                    <li><a href="sessionLogoutAdmin.php">Log Out</a></li>
+                    <li class="active"><a href="user_profile.php">List Buku</a></li>
+                    <li><a href="#">Pemesanan Anda</a></li>
                 </ul>
+                <div class="dropdown">
+                    <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
+                    <div class="dropdown-content">
+                        <a href="#">Edit Profile</a>
+                        <a href="sessionLogoutUser.php">Log Out</a>
+                    </div>
+                </div>
                 <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search" name="search">
@@ -45,7 +50,6 @@
         </nav>
 
         <div id="section2">
-            <a href="addBuku.php" style="position:absolute; left:200px;margin-top:20px;"><button class="btn btn-success">Tambah Buku</button></a>
             <!-- Start Catalogue Book Area -->
             <section id="testimornial-area" style="padding:50px">
                 <div class="container">
@@ -66,7 +70,7 @@
                                         <h5>"<?php echo $row['penerbit'] ?>"</h5>
                                         <mark style="background-color:black;color:white;"><?php echo $row['status_buku'] ?></mark><br><br>
                                         <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
-                                        <a href="editBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-primary">Edit Buku</button></a>
+                                        <a href="pesanBuku.php?id_buku=<?php echo $row['id_buku']; ?>&username=<?php echo $_SESSION['username'] ?>"><button class="btn btn-primary">Pesan Buku</button></a>
                                     </div>
                                 </div>
                         <?php
@@ -82,17 +86,7 @@
         </div>
     <?php
     } else {
-        ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Anda Belum Login',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
-    <?php
-        header("Refresh:1; url=admin_login.php");
+        header("Refresh:0; url=user_login.php");
     }
     ?>
 </body>
