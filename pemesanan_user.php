@@ -17,6 +17,8 @@
     <?php
     include "connection.php";
 
+
+
     session_start();
     if ($_SESSION['status'] == 'user_login') {
         ?>
@@ -48,43 +50,34 @@
                 </form>
             </div>
         </nav>
-        <?php
-            include "connection.php";
-            $id_buku = $_GET['id_buku'];
-            $username = $_GET['username'];
-            $queryUser = "select * from user where username = '$username'";
-            $query = "select * from buku where id_buku='$id_buku'";
-            $resultUsername = mysqli_query($connect, $queryUser);
-            $result = mysqli_query($connect, $query);
-            ?>
-        <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
-            <center>
-                <h1>Pesan Buku Untuk Dipinjam</h1><br>
-            </center>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="prosesPesanBuku.php" name="form1" id="form1">
-                        <?php
-                            while ($row = mysqli_fetch_array($result)) {
-                                while ($rowUser = mysqli_fetch_array($resultUsername)) { ?>
-                                <input type="hidden" name="id_buku" value="<?php echo $row['id_buku']; ?>" id="id_buku" maxlength="20" required>
-                                <input type="hidden" name="id_user" value="<?php echo $rowUser['id_user']; ?>" id="id_user" required>
-                                <center>
-                                    <center><img class="zoom" style="margin-top:30px;margin-bottom:30px;border: 1px solid black;" src="<?php echo $row['nama_file'] ?>" width="140"></center>
-                                    <h2><?php echo $row['nama_buku'] ?></h2>
-                                    <h5>"<?php echo $row['penerbit'] ?>"</h5>
-                                    <h5 style="text-align:left;margin-bottom:10px;"><?php echo $row['keterangan_buku'] ?></h5>
-                                </center>
-                        <?php
-                                }
-                            }
-                            ?>
-                        <br>
-                        <center><button type="submit" style="width:300px;" class="btn btn-success" value="Pesan">Order Now</button></center>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <table class="table table-sm table-dark" border="">
+            <thead>
+                <tr table-info>
+                    <th scope="col">Nama Buku</th>
+                    <th scope="col">Tanggal Book</th>
+                    <th scope="col">Tanggal Pinjam</th>
+                    <th scope="col">Tanggal Kembali</th>
+                    <th scope="col">Denda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    include "connection.php";
+                    $username = $_GET['username'];
+                    $queryUser = "select * from user where username='$username'";
+                    // FIX INI
+                    $query = "select * from peminjaman where "
+
+                    ?>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+
     <?php
     } else {
         header("Refresh:0; url=user_login.php");
