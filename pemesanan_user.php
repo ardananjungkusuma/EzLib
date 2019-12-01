@@ -16,9 +16,6 @@
 <body>
     <?php
     include "connection.php";
-
-
-
     session_start();
     if ($_SESSION['status'] == 'user_login') {
         ?>
@@ -28,8 +25,8 @@
                     <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
                 </div>
                 <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="user_profile.php">List Buku</a></li>
-                    <li><a href="#">Pemesanan Anda</a></li>
+                    <li><a href="user_profile.php">List Buku</a></li>
+                    <li class="active"><a href="#">Pemesanan Anda</a></li>
                 </ul>
                 <div class="dropdown">
                     <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
@@ -50,35 +47,50 @@
                 </form>
             </div>
         </nav>
-        <table class="table table-sm table-dark" border="">
-            <thead>
-                <tr table-info>
-                    <th scope="col">Nama Buku</th>
-                    <th scope="col">Tanggal Book</th>
-                    <th scope="col">Tanggal Pinjam</th>
-                    <th scope="col">Tanggal Kembali</th>
-                    <th scope="col">Denda</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    include "connection.php";
-                    $username = $_GET['username'];
-                    $queryUser = "select * from user where username='$username'";
-                    // FIX INI
-                    $query = "select * from peminjaman where "
+        <?php
+            include "connection.php";
+            $id_user = $_GET['id_user'];
+            // $queryUser = "select * from user where username='$username'";
+            $query = "select * from peminjaman where id_user='$id_user'";
+            $result = mysqli_query($connect, $query);
+            $check = mysqli_num_rows($result);
+            if (mysqli_num_rows($result) > 0) { ?>
+            <table class="table table-bordered">
+                <thead>
+                    <tr table-info>
+                        <th scope="col">Nama Buku</th>
+                        <th scope="col">Tanggal Book</th>
+                        <th scope="col">Tanggal Pinjam</th>
+                        <th scope="col">Tanggal Kembali</th>
+                        <th scope="col">Denda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                            while ($row = mysqli_fetch_array($result)) {
+                                $idBukuCari = $row['id_buku'];
+                                $queryBuku = "select * from buku where id_buku = '$idBukuCari'";
+                                $resultNamaBuku = mysqli_query($connect, $queryBuku);
+                                while ($rowBuku = mysqli_fetch_array($resultNamaBuku)) {
+                                    ?>
 
-                    ?>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-            </tbody>
-        </table>
+                            <tr>
+                                <td><?php echo $rowBuku['nama_buku'] ?></td>
+                                <td><?php echo $row['tanggal_booking'] ?></td>
+                                <td><?php echo $row['tanggal_pinjam'] ?></td>
+                                <td><?php echo $row['tanggal_kembali'] ?></td>
+                                <td><?php echo $row['denda'] ?></td>
+                            </tr>
 
+                    <?php
+                                }
+                            } ?>
+                </tbody>
+            </table>
     <?php
+        } else {
+            echo "Anda Tidak Melakukan Pemesanan";
+        }
     } else {
         header("Refresh:0; url=user_login.php");
     }

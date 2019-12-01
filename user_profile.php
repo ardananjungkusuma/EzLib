@@ -21,12 +21,13 @@
 
     if ($_SESSION['status'] == 'user_login') {
         $usernameNow = $_SESSION['username'];
-        $queryGetId = "select * from user where username = $usernameNow";
+        $queryGetId = "select * from user where username = '$usernameNow'";
         $resultID = mysqli_query($connect, $queryGetId);
         if (mysqli_num_rows($resultID) > 0) {
             // FIX UNTUK MENGEGET ID untuk dikirim ke pemesanan user agar tabel muncul id user dan bisa mengeget nama buku dll
             while ($row2 = mysqli_fetch_array($resultID)) {
                 ?>
+
                 <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
                         <div class="navbar-header">
@@ -84,7 +85,9 @@
                                                         ?>
                                             <a href="pesanBuku.php?id_buku=<?php echo $row['id_buku']; ?>&username=<?php echo $_SESSION['username'] ?>"><button class="btn btn-primary">Pesan Buku</button></a>
                                         <?php
-                                                    } else { }
+                                                    } else {
+                                                        //do nothing
+                                                    }
                                                     ?>
                                         <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
 

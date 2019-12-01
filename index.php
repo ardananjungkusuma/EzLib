@@ -16,7 +16,7 @@
 	include "connection.php";
 
 	session_start();
-	if ($_SESSION['status'] == 'user_login') {
+	if (isset($_SESSION['status']) == 'user_login') {
 		header("Refresh:0; url=user_dashboard.php");
 	} else {
 		?>

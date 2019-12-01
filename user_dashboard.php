@@ -18,7 +18,7 @@
 
     session_start();
     $usernameLoginNow = $_SESSION['username'];
-    if ($_SESSION['status'] == 'user_login') {
+    if (isset($_SESSION['status']) == 'user_login') {
         $sqlGetId = "select * from user where username ='$usernameLoginNow'";
         $resultID = mysqli_query($connect, $sqlGetId);
         if (mysqli_num_rows($resultID) > 0) {

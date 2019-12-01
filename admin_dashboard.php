@@ -27,7 +27,7 @@
         </div>
         <ul class="nav navbar-nav" style="margin-left:60px;">
           <li class="active"><a href="admin_dashboard.php">Manajemen Buku</a></li>
-          <li><a href="#">Manajemen Peminjaman</a></li>
+          <li><a href="manajemen_peminjaman.php">Manajemen Peminjaman</a></li>
           <li><a href="#">Manajemen User</a></li>
         </ul>
         <div class="dropdown">
