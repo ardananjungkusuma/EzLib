@@ -42,11 +42,11 @@
             </div>
         </nav>
         <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
-            <center>
-                <h1>Tambah Buku</h1><br>
-            </center>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="background-color: #f2f2f2; max-height: 2000px; max-width: 3000px; padding: 10px; border-radius: 25px;">
+                    <center>
+                        <h1>Tambah Buku</h1><br>
+                    </center>
                     <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="prosesUploadBuku.php" name="form1" id="form1">
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="nama_buku">Nama Buku: </label>

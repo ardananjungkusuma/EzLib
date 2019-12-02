@@ -19,25 +19,33 @@
 
     session_start();
     if ($_SESSION['status'] == 'user_login') {
-        ?>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
-                </div>
-                <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="user_profile.php">List Buku</a></li>
-                    <li><a href="#">Pemesanan Anda</a></li>
-                </ul>
-                <div class="dropdown" style="float:right">
-                    <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
-                    <div class="dropdown-content">
-                        <a href="#">Edit Profile</a>
-                        <a href="sessionLogoutUser.php">Log Out</a>
+        $usernameNow = $_SESSION['username'];
+        $queryGetId = "select * from user where username = '$usernameNow'";
+        $resultID = mysqli_query($connect, $queryGetId);
+        if (mysqli_num_rows($resultID) > 0) {
+            while ($row2 = mysqli_fetch_array($resultID)) {
+                ?>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
+                        </div>
+                        <ul class="nav navbar-nav" style="margin-left:60px;">
+                            <li><a href="user_profile.php">List Buku</a></li>
+                            <li class="active"><a href="pemesanan_user.php?id_user=<?php echo $row2['id_user'] ?>">Pemesanan Anda</a></li>
+                            <li><a href="rules.php">Peraturan Perpustakaan</a></li>
+                        </ul>
+                        <div class="dropdown" style="float:right">
+                            <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
+                            <div class="dropdown-content">
+                                <a href="#">Edit Profile</a>
+                                <a href="sessionLogoutUser.php">Log Out</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </nav>
+                </nav>
+        <?php }
+            } ?>
         <?php
             include "connection.php";
             $id_buku = $_GET['id_buku'];

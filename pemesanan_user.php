@@ -26,7 +26,8 @@
                 </div>
                 <ul class="nav navbar-nav" style="margin-left:60px;">
                     <li><a href="user_profile.php">List Buku</a></li>
-                    <li class="active"><a href="#">Pemesanan Anda</a></li>
+                    <li class="active"><a href="pemesanan_user.php?id_user=<?php echo $row2['id_user'] ?>">Pemesanan Anda</a></li>
+                    <li><a href="rules.php">Peraturan Perpustakaan</a></li>
                 </ul>
                 <div class="dropdown" style="float:right">
                     <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
@@ -46,14 +47,16 @@
             $check = mysqli_num_rows($result);
             if (mysqli_num_rows($result) > 0) { ?>
             <center>
-                <table class="table table-bordered" style="width:auto;margin-left:30px;margin-right:30px;padding:20px;">
+                <table class="table table-bordered" style="width:auto;margin-left:30px;margin-right:30px;">
                     <thead>
                         <tr table-info>
-                            <th scope=" col">Nama Buku</th>
+                            <th scope="col">ID Pemesanan</th>
+                            <th scope="col">Nama Buku</th>
                             <th scope="col">Tanggal Book</th>
                             <th scope="col">Tanggal Pinjam</th>
                             <th scope="col">Tanggal Kembali</th>
                             <th scope="col">Denda</th>
+                            <th scope="col">Status Buku</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,11 +69,14 @@
                                         ?>
 
                                 <tr>
+
+                                    <td><?php echo $row['id_peminjaman'] ?></td>
                                     <td><?php echo $rowBuku['nama_buku'] ?></td>
                                     <td><?php echo $row['tanggal_booking'] ?></td>
                                     <td><?php echo $row['tanggal_pinjam'] ?></td>
                                     <td><?php echo $row['tanggal_kembali'] ?></td>
                                     <td><?php echo $row['denda'] ?></td>
+                                    <td><?php echo $row['status'] ?></td>
                                 </tr>
 
                         <?php

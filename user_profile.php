@@ -36,6 +36,7 @@
                         <ul class="nav navbar-nav" style="margin-left:60px;">
                             <li class="active"><a href="user_profile.php">List Buku</a></li>
                             <li><a href="pemesanan_user.php?id_user=<?php echo $row2['id_user'] ?>">Pemesanan Anda</a></li>
+                            <li><a href="rules.php">Peraturan Perpustakaan</a></li>
                         </ul>
                         <div class="dropdown" style="float:right">
                             <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>

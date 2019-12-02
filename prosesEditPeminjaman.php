@@ -19,8 +19,9 @@
         $tanggal_pinjam = $_GET['tanggal_pinjam'];
         $tanggal_kembali = $_GET['tanggal_kembali'];
         $denda = $_GET['denda'];
+        $status = $_GET['status'];
 
-        $query = "update peminjaman set tanggal_booking='$tanggal_booking',tanggal_pinjam='$tanggal_pinjam',tanggal_kembali='$tanggal_kembali',denda='$denda' where id_peminjaman='$id_peminjaman'";
+        $query = "update peminjaman set tanggal_booking='$tanggal_booking',tanggal_pinjam='$tanggal_pinjam',tanggal_kembali='$tanggal_kembali',denda='$denda',status='$status' where id_peminjaman='$id_peminjaman'";
         $result = mysqli_query($connect, $query);
 
         if ($result) {

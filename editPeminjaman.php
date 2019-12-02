@@ -57,7 +57,7 @@
             ?>
         <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="background-color: #f2f2f2; max-height: 2000px; max-width: 3000px; padding: 10px; border-radius: 25px;">
                     <form class="form-horizontal" action="prosesEditPeminjaman.php" method="GET" name="form1" id="form1">
                         <?php
                             while ($row = mysqli_fetch_array($result)) {
@@ -92,6 +92,12 @@
                                 <label class="control-label col-sm-2" for="denda">Denda</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control" id="denda" value="<?php echo $row['denda']; ?>" name="denda" maxlength="15">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="status">Status Buku</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="status" value="<?php echo $row['status']; ?>" name="status" maxlength="25">
                                 </div>
                             </div>
                         <?php

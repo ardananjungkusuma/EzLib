@@ -60,6 +60,7 @@
                         <th>Tanggal Pinjam</th>
                         <th>Tanggal Kembali</th>
                         <th>Denda</th>
+                        <th>Status Buku</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -82,6 +83,7 @@
                                     <td><?php echo $row['tanggal_pinjam'] ?></td>
                                     <td><?php echo $row['tanggal_kembali'] ?></td>
                                     <td><?php echo $row['denda'] ?></td>
+                                    <td><?php echo $row['status'] ?></td>
                                     <td><a href="editPeminjaman.php?id_peminjaman=<?php echo $row['id_peminjaman']; ?>"><button style="width:80px;" class="btn btn-danger">Edit</button></a></td>
                                 </tr>
 

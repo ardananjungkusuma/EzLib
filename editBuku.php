@@ -47,7 +47,7 @@
       ?>
     <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="background-color: #f2f2f2; max-height: 2000px; max-width: 3000px; padding: 10px; border-radius: 25px;">
           <form class="form-horizontal" action="prosesEditBuku.php" method="GET" name="form1" id="form1">
             <?php
               while ($row = mysqli_fetch_array($result)) {

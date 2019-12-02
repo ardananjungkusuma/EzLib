@@ -22,6 +22,17 @@
         .zoom:hover {
             transform: scale(2.0);
         }
+
+        .liPeraturan {
+            text-align: left;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
     </style>
 
 </head>
@@ -32,61 +43,56 @@
 
     session_start();
     if ($_SESSION['status'] == 'user_login') {
-        ?>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
-                </div>
-                <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="user_profile.php">List Buku</a></li>
-                    <li><a href="#">Pemesanan Anda</a></li>
-                </ul>
-                <div class="dropdown">
-                    <button class="dropbtn" style="color:red;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatarr.png" width="30px" height="30px"></button>
-                    <div class="dropdown-content">
-                        <a href="#">Edit Profile</a>
-                        <a href="sessionLogoutUser.php">Log Out</a>
-                    </div>
-                </div>
-                <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
+        $usernameNow = $_SESSION['username'];
+        $queryGetId = "select * from user where username = '$usernameNow'";
+        $resultID = mysqli_query($connect, $queryGetId);
+        if (mysqli_num_rows($resultID) > 0) {
+            while ($row2 = mysqli_fetch_array($resultID)) {
+                ?>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="user_dashboard.php">User Dashboard EzLib</a>
+                        </div>
+                        <ul class="nav navbar-nav" style="margin-left:60px;">
+                            <li><a href="user_profile.php">List Buku</a></li>
+                            <li><a href="pemesanan_user.php?id_user=<?php echo $row2['id_user'] ?>">Pemesanan Anda</a></li>
+                            <li class="active"><a href="rules.php">Peraturan Perpustakaan</a></li>
+                        </ul>
+                        <div class="dropdown" style="float:right">
+                            <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
+                            <div class="dropdown-content">
+                                <a href="#">Edit Profile</a>
+                                <a href="sessionLogoutUser.php">Log Out</a>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
-        </nav>
+                </nav>
+        <?php }
+            } ?>
         <div class="container" style="padding: 20px; margin: 20 px auto; margin-left: auto; margin-right: auto;">
             <div class="row" style="margin-top:50px;">
                 <center>
                     <div class="col-md-6" style="background-color: #f2f2f2; height: 700px; width: 1150px; padding: 10px; border-radius: 25px;">
-                        <h1 style="font-size: 50;">EzLib Rules</h1>
+                        <h1 style="font-size: 50;font-family: 'Times New Roman', Times, serif;">Peraturan EzLib</h1>
                         <br>
                         <br>
+                        <h3> Mekanisme Peminjaman Buku</h3><br>
+                        <ol>
+                            <li class="liPeraturan">Peminjam telah terdaftar sebagai anggota perpustakaan Online</li>
+                            <li class="liPeraturan">Peminjam mengatakan ke admin ID Peminjaman yang telah tertera pada menu <i>"Pemesanan Anda"</i></li>
+                            <li class="liPeraturan">Maksimal Waktu Pengambilan Buku Yang Telah Di Booking Adalah 3 Hari, lebih dari itu Buku akan Tersedia Kembali. </li>
+                            <li class="liPeraturan">Maksimal Waktu Pinjam adalah 7 Hari </li>
+                            <li class="liPeraturan">Denda terlambat pengembalian dikenakan Rp 5000/ hari</li>
+                            <li class="liPeraturan">Peminjam Dapat Melihat Maksimal Tanggal Kembali Pada Menu <i>"Pemesanan Anda"</i></li>
+                        </ol>
                         <br>
-                        <br>
-                        <h3> Mekanisme Peminjam buku <br>
-                            <br>
-                            - Mahasiswa telah terdaftar sebagai anggota perpustakaan Online <br>
-                            - Mahasiswa membawa bukti pinjam perpustakaan Online <br>
-                            - Maksimal Waktu Pinjam adalah 7 Hari <br>
-                            - Denda terlambat pengembalian dikenakan Rp 5000/ hari <br>
-                            - Buku di diatur di website dengan tanggal kembali dan diserahkan kepada peminjam
-                            <br> <br>
-                            <br> <br>
-                            <br>
-                            Mekanisme Pengembalian Buku <br>
-                            <br>
-                            - Mahasiswa memperlihatkan akun anggota perpustakaan online <br>
-                            - Mahasiswa harus menunjukan buku yang telah di pinjam kepada admin <br>
-                            - Lalu silahkan diberikan kepada admin untuk melihat tanggal kembalinya
-
-                        </h3>
+                        <h3>Mekanisme Pengembalian Buku</h3><br>
+                        <ol>
+                            <li class="liPeraturan">Mahasiswa memperlihatkan akun anggota perpustakaan online</li>
+                            <li class="liPeraturan">Mahasiswa harus menunjukan buku yang telah di pinjam kepada admin </li>
+                            <li class="liPeraturan">Lalu silahkan diberikan kepada admin untuk melihat tanggal kembalinya</li>
+                        </ol>
                     </div>
                 </center>
             <?php
