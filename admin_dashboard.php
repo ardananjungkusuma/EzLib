@@ -30,28 +30,18 @@
           <li><a href="manajemen_peminjaman.php">Manajemen Peminjaman</a></li>
           <li><a href="#">Manajemen User</a></li>
         </ul>
-        <div class="dropdown">
-          <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome Admin <?php echo $_SESSION['username'] ?></button>
+        <div class="dropdown" style="float:right">
+          <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome Admin <?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
           <div class="dropdown-content">
             <a href="#">Edit Profile</a>
             <a href="sessionLogoutAdmin.php">Log Out</a>
           </div>
         </div>
-        <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:200px;">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </div>
-          </div>
-        </form>
       </div>
     </nav>
 
     <div id="section2">
-      <a href="addBuku.php" style="position:absolute; left:200px;margin-top:20px;"><button class="btn btn-success">Tambah Buku</button></a>
+      <center><a href="addBuku.php"><button style="font-size:20px;width:150px;height:50px;margin-top:20px;" class="btn btn-success">Tambah Buku</button></a></center>
       <!-- Start Catalogue Book Area -->
       <section id="testimornial-area" style="padding:50px">
         <div class="container">
@@ -71,7 +61,7 @@
                     <h2 style="padding:10px;"><?php echo $row['nama_buku'] ?></h2>
                     <h5>"<?php echo $row['penerbit'] ?>"</h5>
                     <mark style="background-color:black;color:white;"><?php echo $row['status_buku'] ?></mark><br><br>
-                    <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
+                    <a href="detailBukuAdmin.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
                     <a href="editBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-primary">Edit Buku</button></a>
                   </div>
                 </div>

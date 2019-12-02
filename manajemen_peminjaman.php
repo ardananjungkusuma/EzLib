@@ -30,23 +30,13 @@
                     <li class="active"><a href="manajemen_peminjaman.php">Manajemen Peminjaman</a></li>
                     <li><a href="#">Manajemen User</a></li>
                 </ul>
-                <div class="dropdown">
-                    <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome Admin <?php echo $_SESSION['username'] ?></button>
+                <div class="dropdown" style="float:right">
+                    <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome Admin <?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
                     <div class="dropdown-content">
                         <a href="#">Edit Profile</a>
                         <a href="sessionLogoutAdmin.php">Log Out</a>
                     </div>
                 </div>
-                <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:200px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </nav>
         <center>
@@ -59,47 +49,50 @@
             $result = mysqli_query($connect, $query);
 
             ?>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nama Buku</th>
-                    <th>Nama Peminjam</th>
-                    <th>Tanggal Booking</th>
-                    <th>Tanggal Pinjam</th>
-                    <th>Tanggal Kembali</th>
-                    <th>Denda</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    while ($row = mysqli_fetch_array($result)) {
-                        $namaBuku = $row['id_buku'];
-                        $idUser = $row['id_user'];
-                        $queryBuku = "select * from buku where id_buku = '$namaBuku'";
-                        $queryUser = "select * from user where id_user = '$idUser'";
-                        $resultNamaBuku = mysqli_query($connect, $queryBuku);
-                        $resultNamaUser = mysqli_query($connect, $queryUser);
-                        while ($rowBuku = mysqli_fetch_array($resultNamaBuku)) {
-                            while ($rowUser = mysqli_fetch_array($resultNamaUser)) {
-                                ?>
-                            <tr>
-                                <td><?php echo $rowBuku['nama_buku'] ?></td>
-                                <td><?php echo $rowUser['nama_user'] ?></td>
-                                <td><?php echo $row['tanggal_booking'] ?></td>
-                                <td><?php echo $row['tanggal_pinjam'] ?></td>
-                                <td><?php echo $row['tanggal_kembali'] ?></td>
-                                <td><?php echo $row['denda'] ?></td>
-                                <td><a href="editPeminjaman.php?id_peminjaman=<?php echo $row['id_peminjaman']; ?>"><button class="btn btn-primary">Edit</button></a></td>
-                            </tr>
+        <br>
+        <center>
+            <table class="table table-bordered" style="width:auto;margin-left:30px;margin-right:30px;">
+                <thead>
+                    <tr>
+                        <th>Nama Buku</th>
+                        <th>Nama Peminjam</th>
+                        <th>Tanggal Booking</th>
+                        <th>Tanggal Pinjam</th>
+                        <th>Tanggal Kembali</th>
+                        <th>Denda</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        while ($row = mysqli_fetch_array($result)) {
+                            $namaBuku = $row['id_buku'];
+                            $idUser = $row['id_user'];
+                            $queryBuku = "select * from buku where id_buku = '$namaBuku'";
+                            $queryUser = "select * from user where id_user = '$idUser'";
+                            $resultNamaBuku = mysqli_query($connect, $queryBuku);
+                            $resultNamaUser = mysqli_query($connect, $queryUser);
+                            while ($rowBuku = mysqli_fetch_array($resultNamaBuku)) {
+                                while ($rowUser = mysqli_fetch_array($resultNamaUser)) {
+                                    ?>
+                                <tr>
+                                    <td><?php echo $rowBuku['nama_buku'] ?></td>
+                                    <td><?php echo $rowUser['nama_user'] ?></td>
+                                    <td><?php echo $row['tanggal_booking'] ?></td>
+                                    <td><?php echo $row['tanggal_pinjam'] ?></td>
+                                    <td><?php echo $row['tanggal_kembali'] ?></td>
+                                    <td><?php echo $row['denda'] ?></td>
+                                    <td><a href="editPeminjaman.php?id_peminjaman=<?php echo $row['id_peminjaman']; ?>"><button style="width:80px;" class="btn btn-danger">Edit</button></a></td>
+                                </tr>
 
-                <?php
+                    <?php
+                                }
                             }
                         }
-                    }
-                    ?>
-            </tbody>
-        </table>
+                        ?>
+                </tbody>
+            </table>
+        </center>
     <?php
     } else {
         header("Refresh:0; url=admin_login.php");

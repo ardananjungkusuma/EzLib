@@ -45,38 +45,40 @@
             $result = mysqli_query($connect, $query);
             $check = mysqli_num_rows($result);
             if (mysqli_num_rows($result) > 0) { ?>
-            <table class="table table-bordered">
-                <thead>
-                    <tr table-info>
-                        <th scope="col">Nama Buku</th>
-                        <th scope="col">Tanggal Book</th>
-                        <th scope="col">Tanggal Pinjam</th>
-                        <th scope="col">Tanggal Kembali</th>
-                        <th scope="col">Denda</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                            while ($row = mysqli_fetch_array($result)) {
-                                $idBukuCari = $row['id_buku'];
-                                $queryBuku = "select * from buku where id_buku = '$idBukuCari'";
-                                $resultNamaBuku = mysqli_query($connect, $queryBuku);
-                                while ($rowBuku = mysqli_fetch_array($resultNamaBuku)) {
-                                    ?>
+            <center>
+                <table class="table table-bordered" style="width:auto;margin-left:30px;margin-right:30px;padding:20px;">
+                    <thead>
+                        <tr table-info>
+                            <th scope=" col">Nama Buku</th>
+                            <th scope="col">Tanggal Book</th>
+                            <th scope="col">Tanggal Pinjam</th>
+                            <th scope="col">Tanggal Kembali</th>
+                            <th scope="col">Denda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $idBukuCari = $row['id_buku'];
+                                    $queryBuku = "select * from buku where id_buku = '$idBukuCari'";
+                                    $resultNamaBuku = mysqli_query($connect, $queryBuku);
+                                    while ($rowBuku = mysqli_fetch_array($resultNamaBuku)) {
+                                        ?>
 
-                            <tr>
-                                <td><?php echo $rowBuku['nama_buku'] ?></td>
-                                <td><?php echo $row['tanggal_booking'] ?></td>
-                                <td><?php echo $row['tanggal_pinjam'] ?></td>
-                                <td><?php echo $row['tanggal_kembali'] ?></td>
-                                <td><?php echo $row['denda'] ?></td>
-                            </tr>
+                                <tr>
+                                    <td><?php echo $rowBuku['nama_buku'] ?></td>
+                                    <td><?php echo $row['tanggal_booking'] ?></td>
+                                    <td><?php echo $row['tanggal_pinjam'] ?></td>
+                                    <td><?php echo $row['tanggal_kembali'] ?></td>
+                                    <td><?php echo $row['denda'] ?></td>
+                                </tr>
 
-                    <?php
-                                }
-                            } ?>
-                </tbody>
-            </table>
+                        <?php
+                                    }
+                                } ?>
+                    </tbody>
+                </table>
+            </center>
     <?php
         } else {
             echo "Anda Tidak Melakukan Pemesanan";

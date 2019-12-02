@@ -28,20 +28,17 @@
                     <a class="navbar-brand" href="admin_dashboard.php">Admin Dashboard EzLib</a>
                 </div>
                 <ul class="nav navbar-nav" style="margin-left:60px;">
-                    <li class="active"><a href="#">Buku</a></li>
-                    <li><a href="#">User</a></li>
-                    <li><a href="sessionLogoutAdmin.php">Log Out</a></li>
+                    <li class="active"><a href="admin_dashboard.php">Manajemen Buku</a></li>
+                    <li><a href="manajemen_peminjaman.php">Manajemen Peminjaman</a></li>
+                    <li><a href="#">Manajemen User</a></li>
                 </ul>
-                <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
+                <div class="dropdown" style="float:right">
+                    <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome Admin <?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
+                    <div class="dropdown-content">
+                        <a href="#">Edit Profile</a>
+                        <a href="sessionLogoutAdmin.php">Log Out</a>
                     </div>
-                </form>
+                </div>
             </div>
         </nav>
         <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
@@ -85,8 +82,11 @@
                             <br>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-success" value="Simpan">Simpan</button>
-                        <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
+                        <br>
+                        <center>
+                            <button style="width:150px;height:40px;font-size:20px;" type="reset" class="btn btn-danger" value="Reset">Reset</button>
+                            <button style="width:150px;height:40px;font-size:20px;" type="submit" class="btn btn-success" value="Simpan">Simpan</button>
+                        </center>
                     </form>
                 </div>
             </div>
