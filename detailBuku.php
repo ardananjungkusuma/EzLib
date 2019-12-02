@@ -62,7 +62,7 @@
                     echo "0 Result";
                 } ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" style="background-color: #f2f2f2; max-height: 2000px; max-width: 3000px; padding: 10px; border-radius: 25px;">
                 <?php
                 include "connection.php";
 

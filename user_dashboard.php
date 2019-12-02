@@ -62,42 +62,34 @@
                 <div id="section2">
                     <!-- Start Testimornial Area -->
                     <section id="testimornial-area" style="padding:50px">
+                        <center>
+                            <h1>Trending Books</h1>
+                        </center>
                         <div class="container">
-                            <div class="row text-center" style="margin-top:30px;">
+                            <div class="row text-center" style="margin-top:20px;">
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
-                                        <img src="img/4-1.jpg" alt="Image">
-                                        <h2>Book One</h2>
-                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-                                        <br>
+                                        <img style="width:260px;height:390px;" src="img/booksCatalogue/5.jpg" alt="Image">
+                                        <h2>Harry Potter (#5)</h2>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
-                                        <img src="img/4-2.jpg" alt="Image">
-                                        <h2>Book Two</h2>
-                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                                        <a href="#" class="content-link">read it</a>
-                                        <br>
-                                        <p id="redd"></p>
+                                        <img src="img/booksCatalogue/44071899._SY475H.jpg" alt="Image">
+                                        <h2>Fair Play</h2>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
-                                        <img src="img/4-3.jpg" alt="Image">
-                                        <h2>Book Three</h2>
-                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-                                        <br>
+                                        <img style="width:260px;height:390px;" src="img/booksCatalogue/2657.jpg" alt="Image">
+                                        <h2>To Kill a Mocking Bird</h2>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
-                                        <img src="img/stackBook.png" style="width:200" alt="Image">
-                                        <h2>All Books</h2>
-                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                                        <a href="viewListBuku.php" class="content-link">details</a>
+                                        <img style="width:260px;height:390px;" src="img/booksCatalogue/1137215._SY475_.jpg" style="width:200" alt="Image">
+                                        <h2>The Boneshaker</h2>
                                         <br>
-                                        <p id="dets"></p>
                                     </div>
                                 </div>
                             </div>
