@@ -29,23 +29,13 @@
                     <li class="active"><a href="user_profile.php">List Buku</a></li>
                     <li><a href="#">Pemesanan Anda</a></li>
                 </ul>
-                <div class="dropdown">
-                    <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
+                <div class="dropdown" style="float:right">
+                    <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
                     <div class="dropdown-content">
                         <a href="#">Edit Profile</a>
                         <a href="sessionLogoutUser.php">Log Out</a>
                     </div>
                 </div>
-                <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </nav>
         <?php
@@ -62,7 +52,7 @@
                 <h1>Pesan Buku Untuk Dipinjam</h1><br>
             </center>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="background-color: #f2f2f2; max-height: 2000px; max-width: 3000px; padding: 10px; border-radius: 25px;">
                     <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="prosesPesanBuku.php" name="form1" id="form1">
                         <?php
                             while ($row = mysqli_fetch_array($result)) {
@@ -79,10 +69,10 @@
                                 }
                             }
                             ?>
-                        <br>
-                        <center><button type="submit" style="width:300px;" class="btn btn-success" value="Pesan">Order Now</button></center>
-                    </form>
                 </div>
+                <br>
+                <center><button type="submit" style="width:500px;height:50px;font-size:25px;margin-top:15px;" class="btn btn-success" value="Pesan">Order Now</button></center>
+                </form>
             </div>
         </div>
     <?php

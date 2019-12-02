@@ -197,7 +197,7 @@
         <?php
                 }
             } else {
-                echo "Bad Wkwkw";
+                header("Refresh:0; url=admin_dashboard.php");
             }
             ?>
         <script src="js/jquery-1.11.2.min.js"></script>

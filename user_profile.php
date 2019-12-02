@@ -37,23 +37,13 @@
                             <li class="active"><a href="user_profile.php">List Buku</a></li>
                             <li><a href="pemesanan_user.php?id_user=<?php echo $row2['id_user'] ?>">Pemesanan Anda</a></li>
                         </ul>
-                        <div class="dropdown">
-                            <button class="dropbtn" style="color:red;float:right;margin-top:10px;">Welcome ,<?php echo $_SESSION['username'] ?></button>
+                        <div class="dropdown" style="float:right">
+                            <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
                             <div class="dropdown-content">
                                 <a href="#">Edit Profile</a>
                                 <a href="sessionLogoutUser.php">Log Out</a>
                             </div>
                         </div>
-                        <form class="navbar-form navbar-left" action="/action_page.php" style="margin-left:500px;">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" name="search">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </nav>
         <?php
@@ -89,7 +79,7 @@
                                                         //do nothing
                                                     }
                                                     ?>
-                                        <a href="detailBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
+                                        <a href="detailBukuUser.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
 
                                     </div>
                                 </div>
