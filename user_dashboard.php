@@ -67,29 +67,33 @@
                         </center>
                         <div class="container">
                             <div class="row text-center" style="margin-top:20px;">
+                                <br><br>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
                                         <img style="width:260px;height:390px;" src="img/booksCatalogue/5.jpg" alt="Image">
                                         <h2>Harry Potter (#5)</h2>
+                                        <h4>"J.K. Rowling"</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
                                         <img src="img/booksCatalogue/44071899._SY475H.jpg" alt="Image">
                                         <h2>Fair Play</h2>
+                                        <h4>"Eve Rodsky"</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
                                         <img style="width:260px;height:390px;" src="img/booksCatalogue/2657.jpg" alt="Image">
                                         <h2>To Kill a Mocking Bird</h2>
+                                        <h4>"Harper Lee"</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
                                     <div class="testimonial-content">
                                         <img style="width:260px;height:390px;" src="img/booksCatalogue/1137215._SY475_.jpg" style="width:200" alt="Image">
                                         <h2>The Boneshaker</h2>
-                                        <br>
+                                        <h4>"Cherie Priest"</h4>
                                     </div>
                                 </div>
                             </div>
