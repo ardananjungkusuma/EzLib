@@ -30,12 +30,11 @@
                 <ul class="nav navbar-nav" style="margin-left:60px;">
                     <li class="active"><a href="admin_dashboard.php">Manajemen Buku</a></li>
                     <li><a href="manajemen_peminjaman.php">Manajemen Peminjaman</a></li>
-                    <li><a href="#">Manajemen User</a></li>
+                    <li><a href="manajemen_user.php">Manajemen User</a></li>
                 </ul>
                 <div class="dropdown" style="float:right">
                     <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome Admin <?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
                     <div class="dropdown-content">
-                        <a href="#">Edit Profile</a>
                         <a href="sessionLogoutAdmin.php">Log Out</a>
                     </div>
                 </div>

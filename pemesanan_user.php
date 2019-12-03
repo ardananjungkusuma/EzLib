@@ -32,7 +32,6 @@
                 <div class="dropdown" style="float:right">
                     <h5 style="color:white;float:right;margin-top:10px; border-radius: 20px;">Welcome ,<?php echo $_SESSION['username'] ?> <img src="img/avatar.png" width="30px" height="30px"></h5>
                     <div class="dropdown-content">
-                        <a href="#">Edit Profile</a>
                         <a href="sessionLogoutUser.php">Log Out</a>
                     </div>
                 </div>
