@@ -81,16 +81,26 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="control-label col-sm-2" for="status_buku">Status Buku Tampilan</label>
+                <div class="col-sm-10 control-label col-sm-2">
+                  <select class="form-control" id="status_buku" name="status_buku">
+                    <option value="Booked">Booked</option>
+                    <option value="Tersedia">Tersedia</option>
+                    <option value="Tidak Tersedia">Tidak Tersedia</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="form-group">
                 <label class="control-label col-sm-2" for="status_buku">Status Buku</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="status_buku" value="<?php echo $row['status_buku']; ?>" name="status_buku" maxlength="15" required>
-                </div>
-              <?php
-                }
-                ?>
-              </div>
-              <br>
-              <button type="submit" class="btn btn-success" value="Simpan" style="margin-left:80px;">Simpan</button>
+                </div> -->
+            <?php
+              }
+              ?>
+            <!-- </div> -->
+            <br>
+            <button type="submit" class="btn btn-success" value="Simpan" style="margin-left:80px;">Simpan</button>
           </form>
         </div>
       </div>

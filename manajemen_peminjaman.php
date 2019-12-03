@@ -60,7 +60,7 @@
                         <th>Tanggal Pinjam</th>
                         <th>Tanggal Kembali</th>
                         <th>Denda</th>
-                        <th>Status Buku</th>
+                        <th>Status Peminjam</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>

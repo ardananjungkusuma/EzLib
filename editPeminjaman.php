@@ -96,10 +96,21 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="status">Status Buku</label>
+                                <div class="col-sm-10 control-label col-sm-2">
+                                    <select class="form-control" id="status" name="status">
+                                        <option value="Dibooking">Dibooking</option>
+                                        <option value="Tidak Jadi Dibooking">Tidak Jadi Dibooking</option>
+                                        <option value="Dipinjam">Dipinjam</option>
+                                        <option value="Dikembalikan">Dikembalikan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label class="control-label col-sm-2" for="status">Status Buku</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="status" value="<?php echo $row['status']; ?>" name="status" maxlength="25">
                                 </div>
-                            </div>
+                            </div> -->
                         <?php
                             }
                             ?>

@@ -15,7 +15,7 @@
         $id_buku = $_POST['id_buku'];
         $id_user = $_POST['id_user'];
         $tanggalBooking = date("d/m/Y");
-        $sqlInsert = "insert into peminjaman(id_user,id_buku,tanggal_booking,tanggal_pinjam,tanggal_kembali,denda,status) values ('$id_user','$id_buku','$tanggalBooking','Not Set','Not Set','','Booked')";
+        $sqlInsert = "insert into peminjaman(id_user,id_buku,tanggal_booking,tanggal_pinjam,tanggal_kembali,denda,status) values ('$id_user','$id_buku','$tanggalBooking','Not Set','Not Set','','Dibooking')";
         $res = mysqli_query($connect, $sqlInsert) or die(mysqli_close($connect));
         ?><script>
             Swal.fire({
