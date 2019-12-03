@@ -61,8 +61,8 @@
                     <h2 style="padding:10px;"><?php echo $row['nama_buku'] ?></h2>
                     <h5>"<?php echo $row['penerbit'] ?>"</h5>
                     <mark style="background-color:black;color:white;"><?php echo $row['status_buku'] ?></mark><br><br>
-                    <a href="detailBukuAdmin.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
                     <a href="editBuku.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-primary">Edit Buku</button></a>
+                    <a href="detailBukuAdmin.php?id_buku=<?php echo $row['id_buku']; ?>"><button class="btn btn-warning">Detail Buku</button></a>
                   </div>
                 </div>
             <?php

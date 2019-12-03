@@ -71,23 +71,23 @@
         <?php }
             } ?>
         <div class="container" style="padding: 20px; margin: 20 px auto; margin-left: auto; margin-right: auto;">
-            <div class="row" style="margin-top:50px;">
+            <div class="row">
                 <center>
                     <div class="col-md-6" style="background-color: #f2f2f2; height: 700px; width: 1150px; padding: 10px; border-radius: 25px;">
                         <h1 style="font-size: 50;font-family: 'Times New Roman', Times, serif;">Peraturan EzLib</h1>
-                        <br>
-                        <br>
-                        <h3> Mekanisme Peminjaman Buku</h3><br>
+
+                        <h3 style="text-align: left"> Mekanisme Peminjaman Buku</h3><br>
                         <ol>
-                            <li class="liPeraturan">Peminjam telah terdaftar sebagai anggota perpustakaan Online</li>
-                            <li class="liPeraturan">Peminjam mengatakan ke admin ID Peminjaman yang telah tertera pada menu <i>"Pemesanan Anda"</i></li>
+                            <li class="liPeraturan">Peminjam Telah Terdaftar Sebagai anggota website EzLib.</li>
+                            <li class="liPeraturan">Peminjam Bisa Melihat Buku pada Catalog Buku. Buku yang tersedia bisa langsung dibooking untuk dipesan.</li>
                             <li class="liPeraturan">Maksimal Waktu Pengambilan Buku Yang Telah Di Booking Adalah 3 Hari, lebih dari itu Buku akan Tersedia Kembali. </li>
+                            <li class="liPeraturan">Peminjam mengatakan ke admin ID Peminjaman yang telah tertera pada menu <i>"Pemesanan Anda"</i></li>
                             <li class="liPeraturan">Maksimal Waktu Pinjam adalah 7 Hari </li>
                             <li class="liPeraturan">Denda terlambat pengembalian dikenakan Rp 5000/ hari</li>
                             <li class="liPeraturan">Peminjam Dapat Melihat Maksimal Tanggal Kembali Pada Menu <i>"Pemesanan Anda"</i></li>
                         </ol>
                         <br>
-                        <h3>Mekanisme Pengembalian Buku</h3><br>
+                        <h3 style="text-align: left">Mekanisme Pengembalian Buku</h3><br>
                         <ol>
                             <li class="liPeraturan">Mahasiswa memperlihatkan akun anggota perpustakaan online</li>
                             <li class="liPeraturan">Mahasiswa harus menunjukan buku yang telah di pinjam kepada admin </li>

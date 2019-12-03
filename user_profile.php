@@ -24,7 +24,6 @@
         $queryGetId = "select * from user where username = '$usernameNow'";
         $resultID = mysqli_query($connect, $queryGetId);
         if (mysqli_num_rows($resultID) > 0) {
-            // FIX UNTUK MENGEGET ID untuk dikirim ke pemesanan user agar tabel muncul id user dan bisa mengeget nama buku dll
             while ($row2 = mysqli_fetch_array($resultID)) {
                 ?>
 
