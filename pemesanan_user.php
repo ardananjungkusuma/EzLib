@@ -84,9 +84,11 @@
                     </tbody>
                 </table>
             </center>
+        <?php
+            } else {
+                ?>
+            <center><?php echo "Anda Tidak Melakukan Pemesanan"; ?></center>
     <?php
-        } else {
-            echo "Anda Tidak Melakukan Pemesanan";
         }
     } else {
         header("Refresh:0; url=user_login.php");

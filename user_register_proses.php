@@ -35,7 +35,7 @@
         <?php
             header("Refresh:1; url=user_register.php");
         } else {
-            $sql = "INSERT INTO `user` (`username`, `password`, `nama_user`, `alamat_user`, `email`, `no_hp`) VALUES ('$username', MD5('$password'), '$nama_user', '$alamat_user', '$email', '$no_hp')";
+            $sql = "INSERT INTO `user` (`username`, `password`, `nama_user`, `alamat_user`, `email`, `no_hp`) VALUES ('$username', MD5('$password'), '$nama_user', '$alamat_user', '$email', '+62$no_hp')";
             if (mysqli_query($connect, $sql)) {
                 ?>
             <script>

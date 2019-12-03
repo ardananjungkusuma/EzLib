@@ -74,7 +74,7 @@
                         No Handphone
                     </span>
                     <div class="wrap-input100 validate-input m-b-36" data-validate="No Handphone is required">
-                        <input class="input100" type="text" name="no_hp" value="+62">
+                        <input class="input100" type="number" name="no_hp" placeholder="85256125123">
                         <span class="focus-input100"></span>
                     </div>
 
@@ -84,6 +84,12 @@
                         </button>
                     </div>
                 </form>
+                <br>
+                <div class="container-login100-form-btn">
+                    <a href="index.php"><button class="login100-form-btn">
+                            Back To Homepage
+                        </button></a>
+                </div>
             </div>
         </div>
     </div>
