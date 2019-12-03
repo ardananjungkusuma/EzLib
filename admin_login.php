@@ -52,6 +52,12 @@
 						</button>
 					</div>
 				</form>
+				<br>
+				<div class="container-login100-form-btn">
+					<a href="index.php"><button class="login100-form-btn">
+							Back To Homepage
+						</button></a>
+				</div>
 			</div>
 		</div>
 	</div>
