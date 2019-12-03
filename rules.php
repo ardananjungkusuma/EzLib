@@ -78,20 +78,21 @@
 
                         <h3 style="text-align: left"> Mekanisme Peminjaman Buku</h3><br>
                         <ol>
-                            <li class="liPeraturan">Peminjam Telah Terdaftar Sebagai anggota website EzLib.</li>
-                            <li class="liPeraturan">Peminjam Bisa Melihat Buku pada Catalog Buku. Buku yang tersedia bisa langsung dibooking untuk dipesan.</li>
-                            <li class="liPeraturan">Maksimal Waktu Pengambilan Buku Yang Telah Di Booking Adalah 3 Hari, lebih dari itu Buku akan Tersedia Kembali. </li>
-                            <li class="liPeraturan">Peminjam mengatakan ke admin ID Peminjaman yang telah tertera pada menu <i>"Pemesanan Anda"</i></li>
-                            <li class="liPeraturan">Maksimal Waktu Pinjam adalah 7 Hari </li>
-                            <li class="liPeraturan">Denda terlambat pengembalian dikenakan Rp 5000/ hari</li>
-                            <li class="liPeraturan">Peminjam Dapat Melihat Maksimal Tanggal Kembali Pada Menu <i>"Pemesanan Anda"</i></li>
+                            <li class="liPeraturan">Peminjam Telah Terdaftar Sebagai Anggota Website EzLib.</li>
+                            <li class="liPeraturan">Peminjam Bisa Melihat Buku Pada Catalog Buku. Buku Yang Tersedia Bisa Langsung Dibooking Untuk Dipesan.</li>
+                            <li class="liPeraturan">Tidak Ada Maksimal Peminjaman Buku.</li>
+                            <li class="liPeraturan">Maksimal Waktu Pengambilan Buku Yang Telah Di Booking Adalah 3 Hari, Lebih Dari Itu Status Buku Akan Tersedia Kembali (Bisa Dipesan Orang Lain). </li>
+                            <li class="liPeraturan">Peminjam Pergi Ke Perpustakaan Dan Mengatakan Ke Admin ID Peminjaman Yang Telah Tertera Pada Menu <i>"Pemesanan Anda".</i></li>
+                            <li class="liPeraturan">Maksimal Waktu Pinjam adalah 7 Hari.</li>
+                            <li class="liPeraturan">Denda Terlambat Pengembalian Dikenakan Rp.5000/hari.</li>
+                            <li class="liPeraturan">Peminjam Dapat Melihat Maksimal Tanggal Pengembalian Buku Pada Menu <i>"Pemesanan Anda".</i></li>
                         </ol>
                         <br>
                         <h3 style="text-align: left">Mekanisme Pengembalian Buku</h3><br>
                         <ol>
-                            <li class="liPeraturan">Mahasiswa memperlihatkan akun anggota perpustakaan online</li>
-                            <li class="liPeraturan">Mahasiswa harus menunjukan buku yang telah di pinjam kepada admin </li>
-                            <li class="liPeraturan">Lalu silahkan diberikan kepada admin untuk melihat tanggal kembalinya</li>
+                            <li class="liPeraturan">Peminjam Mengatakan Ke Admin ID Peminjaman Yang Telah Tertera Pada Menu <i>"Pemesanan Anda".</i></li>
+                            <li class="liPeraturan">Peminjam Memberikan Buku Yang Telah Di Pinjam Kepada Admin, Admin Akan Mengecek Keadaan Buku.</li>
+                            <li class="liPeraturan">Lalu Admin Akan Memproses Pengembalian Buku Anda, Anda Bisa Melihat Riwayat Peminjaman Pada Menu.</li>
                         </ol>
                     </div>
                 </center>
