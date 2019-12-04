@@ -57,7 +57,6 @@
 				</center>
 				<div class="container">
 					<div class="row text-center" style="margin-top:20px;">
-						<br><br>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 							<div class="testimonial-content">
 								<img style="width:260px;height:390px;" src="img/booksCatalogue/5.jpg" alt="Image">

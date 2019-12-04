@@ -17,7 +17,7 @@
     $no_hp = $_POST['no_hp'];
 
 
-    $sqlCheck = "SELECT * FROM user where username='$username' AND email='$email'";
+    $sqlCheck = "SELECT * FROM user where username='$username' OR email='$email'";
     $runCheck = mysqli_query($connect, $sqlCheck);
 
     $checkAvailability = mysqli_num_rows($runCheck);
