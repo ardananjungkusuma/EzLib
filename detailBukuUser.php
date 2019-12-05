@@ -89,6 +89,15 @@ if ($_SESSION['status'] == 'user_login') {
                             <h6><?php echo $row['penerbit'] ?></h6>
                             <h5 style="color:red;"><?php echo $row['status_buku'] ?></h5>
                             <h5 style="margin-bottom:10px;"><?php echo $row['keterangan_buku'] ?></h5>
+                            <?php
+                                        if ($row['status_buku'] == "Tersedia") {
+                                            ?>
+                                <a href="pesanBuku.php?id_buku=<?php echo $id_buku ?>&username=<?php echo $_SESSION['username'] ?>"><button class="btn btn-primary" style="width:250px;">Pesan Buku</button></a>
+                            <?php
+                                        } else {
+                                            //do nothing
+                                        }
+                                        ?>
                         </center>
                 <?php
                         }
