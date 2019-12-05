@@ -52,7 +52,7 @@
                                 <div class="col-sm-12 text-center">
                                     <div class="header-content">
                                         <h1>Ez Library</h1>
-                                        <h5>Your Choice For Online Library</h5>
+                                        <h5>Your Choice For Online Premium Library</h5>
                                     </div>
                                 </div>
                             </div>
