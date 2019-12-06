@@ -156,7 +156,7 @@
                                     <div class="contact-content">
                                         <h1>Profile Status</h1>
                                         <div class="form-group">
-                                            <a href="user_profile.php?id_user=<?php echo $row['id_user']; ?>"><button class="btn btn-default">Profile Details</button></a>
+                                            <a href="user_profile.php?id_user=<?php echo $row['id_user']; ?>"><button class="btn btn-default">User Dashboard</button></a>
                                             <a href="sessionLogoutUser.php"><button class="btn btn-danger">Log Out</button></a>
                                         </div>
                                     </div>
