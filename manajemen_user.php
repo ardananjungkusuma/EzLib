@@ -39,7 +39,7 @@
             </div>
         </nav>
         <center>
-            <h3 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Tabel Peminjaman</h3>
+            <h3 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Tabel User</h3>
         </center>
         <?php
             include "connection.php";
